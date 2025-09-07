@@ -13,7 +13,7 @@
 
 ## 🚀 Instalación rápida
 
-```bash
+
 git clone <repository-url>
 cd smart-duplicate-hunter
 python -m venv venv
@@ -29,7 +29,7 @@ Para evitar falsos positivos por colisiones, comparar byte-a-byte solo entre arc
 Imágenes: usar perceptual hashing (aHash/dHash/pHash); dos fotos con distinta compresión/escala pueden dar hashes “cercanos”.
 Música/Vídeo: comparar metadatos (título, artista, duración) y/o fingerprints (p. ej., Chromaprint en música).
 Definir un umbral de similitud
-```
+
 
 Bibliotecas especializadas disponibles:
 * hashlib (MD5, SHA-1, BLAKE3) para hashing
@@ -39,7 +39,7 @@ Bibliotecas especializadas disponibles:
 * pathlib para manejo moderno de rut
 * concurrent.futures para paralelización
 
-
+```
 smart-duplicate-hunter/
 ├── src/
 │   ├── __init__.py
@@ -57,16 +57,19 @@ smart-duplicate-hunter/
 ├── README.md
 ├── .gitignore
 └── config.yaml
-
+```
 
 ## USO
 
 # Análisis básico
+```
 python src/main.py scan /ruta/a/analizar
+```
 
 # Con opciones avanzadas
+```
 python src/main.py scan /ruta/a/analizar --similarity --auto-clean
-
+```
 
 
 
