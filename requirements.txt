@@ -1,0 +1,19 @@
+# Core dependencies
+Pillow>=10.0.0
+imagehash>=4.3.1
+mutagen>=1.47.0
+send2trash>=1.8.2
+blake3>=0.3.3
+
+# CLI and progress
+click>=8.1.7
+tqdm>=4.66.0
+rich>=13.7.0
+
+# Configuration
+pyyaml>=6.0.1
+
+# Development
+pytest>=7.4.0
+black>=23.9.0
+flake8>=6.1.0

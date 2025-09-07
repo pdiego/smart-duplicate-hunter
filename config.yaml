@@ -1,0 +1,56 @@
+### config.yaml
+```yaml
+# SmartDuplicateHunter Configuration
+
+# File scanning settings
+scanning:
+  include_extensions:
+    - .jpg
+    - .jpeg
+    - .png
+    - .gif
+    - .mp4
+    - .avi
+    - .mp3
+    - .wav
+    - .pdf
+    - .doc
+    - .docx
+  
+  exclude_directories:
+    - __pycache__
+    - .git
+    - node_modules
+    - .vscode
+  
+  min_file_size: 1024  # 1KB minimum
+  max_file_size: 10737418240  # 10GB maximum
+
+# Hashing settings
+hashing:
+  algorithm: blake3  # blake3, sha256, md5
+  partial_hash_size: 8192  # bytes for quick comparison
+  
+# Similarity detection
+similarity:
+  images:
+    enabled: true
+    threshold: 0.9  # 0.0 to 1.0
+    algorithms: [ahash, dhash, phash]
+  
+  audio:
+    enabled: true
+    compare_metadata: true
+    duration_tolerance: 5  # seconds
+
+# Performance
+performance:
+  max_workers: 4
+  chunk_size: 1024
+  enable_progress_bar: true
+
+# Safety
+safety:
+  use_trash: true
+  create_backup: false
+  dry_run: false
